@@ -3255,6 +3255,13 @@ static struct i2c_registry msm8x60_i2c_devices[] __initdata = {
 static void register_i2c_devices(void)
 {
 	int i;
+	int hwid;
+
+	hwid = hw_id_get_mask();
+	if (hwid >= 2)
+		pm8901_platform_data.pm_dVdd_unstable = 0;
+	else
+		pm8901_platform_data.pm_dVdd_unstable = 1;
 
 	semc_fuji_pmic_register();
 

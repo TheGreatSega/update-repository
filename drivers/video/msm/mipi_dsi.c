@@ -486,6 +486,8 @@ static int mipi_dsi_off(struct platform_device *pdev)
 			mipi_dsi_set_tear_off(mfd);
 		}
 	}
+	if (mfd->panel_info.type == MIPI_VIDEO_PANEL)
+		mipi_dsi_controller_cfg_video(0);
 
 	ret = panel_next_off(pdev);
 

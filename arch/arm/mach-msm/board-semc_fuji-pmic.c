@@ -780,7 +780,7 @@ static struct mfd_cell pm8901_subdevs[] = {
 	PM8901_VREG(PM8901_VREG_ID_HDMI_MVS),
 };
 
-static struct pm8901_platform_data pm8901_platform_data = {
+struct pm8901_platform_data pm8901_platform_data = {
 	.irq_base = PM8901_IRQ_BASE,
 	.num_subdevs = ARRAY_SIZE(pm8901_subdevs),
 	.sub_devices = pm8901_subdevs,

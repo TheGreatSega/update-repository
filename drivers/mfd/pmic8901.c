@@ -911,7 +911,8 @@ static int pm8901_probe(struct i2c_client *client,
 	if (rc < 0)
 		pr_err("%s: could not set up debugfs: %d\n", __func__, rc);
 
-	pm8901_preload_dVdd();
+	if (pdata->pm_dVdd_unstable)
+		pm8901_preload_dVdd();
 
 	return rc;
 }

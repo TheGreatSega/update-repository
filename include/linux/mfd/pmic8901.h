@@ -57,6 +57,7 @@ struct pm8901_platform_data {
 	int		num_subdevs;
 	struct mfd_cell *sub_devices;
 	int		irq_trigger_flags;
+	int		pm_dVdd_unstable;
 };
 
 struct pm8901_gpio_platform_data {

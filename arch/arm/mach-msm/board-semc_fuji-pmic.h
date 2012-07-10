@@ -19,6 +19,7 @@
 
 void __init semc_fuji_pmic_register(void);
 extern struct platform_device semc_fuji_adc_device;
+extern struct pm8901_platform_data pm8901_platform_data;
 
 #endif
 
